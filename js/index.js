@@ -1,15 +1,15 @@
 const btn = document.querySelector(".btn");
 const boxCards = document.querySelector(".row");
-
-let products = [];
+const message = document.querySelector(".message");
 btn.addEventListener("click", () => {
+  message.classList.remove("d-none");
   fetch("https://dummyjson.com/products")
-    .then((res) => {
-      return res.json();
-    })
-    .then((data) => {
-      products = data.products;
-      console.log(products);
+  .then((res) => {
+    return res.json();
+  })
+  .then((data) => {
+    products = data.products;
+    message.classList.add("d-none");
 
       products.forEach((index) => {
         let content = `<div class="col-12 col-sm-6  col-md-4 col-lg-3 mb-3">

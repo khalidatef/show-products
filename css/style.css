@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.product-image {
+  height: 220px;
+  object-fit: contain;
+  padding: 20px;
+}
+.product-description {
+  height: 70px;
+  overflow: hidden;
+}
+.product-card {
+  height: 100%;
+  transition: 0.3s;
+}
+.product-card:hover {
+  transform: translatey(-10px);
+}
